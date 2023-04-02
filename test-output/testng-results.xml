@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-02T11:44:29 IST" name="Default suite" finished-at="2023-04-02T11:44:38 IST" duration-ms="8614">
+    <groups>
+    </groups>
+    <test started-at="2023-04-02T11:44:29 IST" name="Default test" finished-at="2023-04-02T11:44:38 IST" duration-ms="8614">
+      <class name="singleton.SingletonDesignTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:singleton.SingletonDesignTest@5ba3f27a]" started-at="2023-04-02T11:44:29 IST" name="setUp" finished-at="2023-04-02T11:44:34 IST" duration-ms="5052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testOne()[pri:1, instance:singleton.SingletonDesignTest@5ba3f27a]" started-at="2023-04-02T11:44:34 IST" name="testOne" finished-at="2023-04-02T11:44:37 IST" duration-ms="2614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOne -->
+        <test-method signature="testTwo()[pri:2, instance:singleton.SingletonDesignTest@5ba3f27a]" started-at="2023-04-02T11:44:37 IST" name="testTwo" finished-at="2023-04-02T11:44:38 IST" duration-ms="612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:singleton.SingletonDesignTest@5ba3f27a]" started-at="2023-04-02T11:44:38 IST" name="tearDown" finished-at="2023-04-02T11:44:38 IST" duration-ms="262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- singleton.SingletonDesignTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
