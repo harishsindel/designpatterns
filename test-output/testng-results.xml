@@ -1,29 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-02T14:48:07 IST" name="Suite" finished-at="2023-04-02T14:48:16 IST" duration-ms="9360">
+  <suite started-at="2023-04-16T10:33:27 IST" name="Suite" finished-at="2023-04-16T10:33:46 IST" duration-ms="18623">
     <groups>
     </groups>
-    <test started-at="2023-04-02T14:48:07 IST" name="Test" finished-at="2023-04-02T14:48:16 IST" duration-ms="9360">
-      <class name="singleton.SingletonDesignTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:singleton.SingletonDesignTest@5ba3f27a]" started-at="2023-04-02T14:48:07 IST" name="setUp" finished-at="2023-04-02T14:48:13 IST" duration-ms="6182" status="PASS">
+    <test started-at="2023-04-16T10:33:27 IST" name="invalid email login" finished-at="2023-04-16T10:33:41 IST" duration-ms="13638">
+      <class name="testRunnersForThreadLocal.LoginTestRunner2">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:testRunnersForThreadLocal.LoginTestRunner2@194bcebf]" started-at="2023-04-16T10:33:27 IST" name="Setup" finished-at="2023-04-16T10:33:37 IST" duration-ms="9463" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testOne()[pri:1, instance:singleton.SingletonDesignTest@5ba3f27a]" started-at="2023-04-02T14:48:13 IST" name="testOne" finished-at="2023-04-02T14:48:15 IST" duration-ms="2241" status="PASS">
+        </test-method> <!-- Setup -->
+        <test-method signature="loginWithInvalidEmailTest()[pri:0, instance:testRunnersForThreadLocal.LoginTestRunner2@194bcebf]" started-at="2023-04-16T10:33:37 IST" name="loginWithInvalidEmailTest" finished-at="2023-04-16T10:33:39 IST" duration-ms="2226" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testOne -->
-        <test-method signature="testTwo()[pri:2, instance:singleton.SingletonDesignTest@5ba3f27a]" started-at="2023-04-02T14:48:15 IST" name="testTwo" finished-at="2023-04-02T14:48:16 IST" duration-ms="592" status="PASS">
+        </test-method> <!-- loginWithInvalidEmailTest -->
+        <test-method signature="loginWithInvalidEmailTest1()[pri:0, instance:testRunnersForThreadLocal.LoginTestRunner2@194bcebf]" started-at="2023-04-16T10:33:39 IST" name="loginWithInvalidEmailTest1" finished-at="2023-04-16T10:33:41 IST" duration-ms="1880" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTwo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:singleton.SingletonDesignTest@5ba3f27a]" started-at="2023-04-02T14:48:16 IST" name="tearDown" finished-at="2023-04-02T14:48:16 IST" duration-ms="279" status="PASS">
+        </test-method> <!-- loginWithInvalidEmailTest1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunnersForThreadLocal.LoginTestRunner2@194bcebf]" started-at="2023-04-16T10:33:41 IST" name="tearDown" finished-at="2023-04-16T10:33:41 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- singleton.SingletonDesignTest -->
-    </test> <!-- Test -->
+      </class> <!-- testRunnersForThreadLocal.LoginTestRunner2 -->
+    </test> <!-- invalid email login -->
+    <test started-at="2023-04-16T10:33:43 IST" name="valid email login" finished-at="2023-04-16T10:33:46 IST" duration-ms="2883">
+      <class name="testRunnersForThreadLocal.LoginTestRunner1">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:testRunnersForThreadLocal.LoginTestRunner1@3f6f6701]" started-at="2023-04-16T10:33:43 IST" name="Setup" finished-at="2023-04-16T10:33:44 IST" duration-ms="1237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="loginTest()[pri:0, instance:testRunnersForThreadLocal.LoginTestRunner1@3f6f6701]" started-at="2023-04-16T10:33:44 IST" name="loginTest" finished-at="2023-04-16T10:33:46 IST" duration-ms="1641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testRunnersForThreadLocal.LoginTestRunner1@3f6f6701]" started-at="2023-04-16T10:33:46 IST" name="tearDown" finished-at="2023-04-16T10:33:46 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:testRunnersForThreadLocal.LoginTestRunner1@3f6f6701]" started-at="2023-04-16T10:33:46 IST" name="tearDownAfterClass" finished-at="2023-04-16T10:33:46 IST" duration-ms="340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterClass -->
+      </class> <!-- testRunnersForThreadLocal.LoginTestRunner1 -->
+    </test> <!-- valid email login -->
   </suite> <!-- Suite -->
 </testng-results>
