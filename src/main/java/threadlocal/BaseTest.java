@@ -24,12 +24,13 @@ public class BaseTest {
             threadLocalDriver.set(driver);
             driver = getDriver();
             System.out.println("Before Test Thread ID: "+Thread.currentThread().getId());
-            getDriver().get(configReader.getApplicationUrl());
+            //driver.get(configReader.getApplicationUrl());
     	} else {
     		SingletonBaseClass.init();
     		driver = SingletonBaseClass.getDriver();
-    		driver.get(configReader.getApplicationUrl());
+    		//driver.get(configReader.getApplicationUrl());
     	}
+    	driver.get(configReader.getApplicationUrl());
         //driver = BrowserManager.doBrowserSetup();
         //set driver
         //threadLocalDriver.set(driver);
