@@ -61,6 +61,12 @@ public class BaseTest {
     }
     @AfterSuite
 	public void tearDownAfterClass() {
+    	if(parallel.equalsIgnoreCase("true")) {
+        	driver.quit();
+            System.out.println("After Test Thread ID: "+Thread.currentThread().getId());
+            threadLocalDriver.remove();
+    	} else {
 		SingletonBaseClass.quit();
+    	}
 	}
 }

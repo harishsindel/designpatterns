@@ -15,8 +15,6 @@ public class LoginTestRunner1 extends BaseTest {
 
     @Test
     public void loginTest() throws IOException, ParseException {
-        //getDriver().get("https://magento.softwaretestingboard.com/");
-		System.out.println("else");
         //Login login = new Login(getDriver());
     	Login login = new Login(driver);
 
