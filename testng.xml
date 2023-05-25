@@ -20,5 +20,4 @@
             <class name="testRunnersForThreadLocal.LoginTestRunner1"/>
         </classes>
     </test>
-    
 </suite> <!-- Suite -->

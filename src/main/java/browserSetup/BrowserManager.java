@@ -1,4 +1,4 @@
-package threadlocal;
+package browserSetup;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.ConfigFileReader;
 
 public class BrowserManager {
-	public static WebDriver doBrowserSetup(){
+	public static WebDriver getDriver(){
 		ConfigFileReader configReader = new ConfigFileReader();
 
         WebDriver driver = null;

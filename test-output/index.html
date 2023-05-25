@@ -175,13 +175,13 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;invalid email login&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;invalid email login&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testRunnersForThreadLocal.LoginTestRunner2&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- invalid email login --&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;valid email login&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;valid email login&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testRunnersForThreadLocal.LoginTestRunner1&quot;/&gt;
     &lt;/classes&gt;
@@ -228,22 +228,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginWithInvalidEmailTest')
-data.setCell(0, 2, 'testRunnersForThreadLocal.LoginTestRunner2')
-data.setCell(0, 3, 2226);
+data.setCell(0, 1, 'loginTest')
+data.setCell(0, 2, 'testRunnersForThreadLocal.LoginTestRunner1')
+data.setCell(0, 3, 3020);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginWithInvalidEmailTest1')
+data.setCell(1, 1, 'loginWithInvalidEmailTest')
 data.setCell(1, 2, 'testRunnersForThreadLocal.LoginTestRunner2')
-data.setCell(1, 3, 1880);
+data.setCell(1, 3, 2995);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginTest')
-data.setCell(2, 2, 'testRunnersForThreadLocal.LoginTestRunner1')
-data.setCell(2, 3, 1641);
+data.setCell(2, 1, 'loginWithInvalidEmailTest1')
+data.setCell(2, 2, 'testRunnersForThreadLocal.LoginTestRunner2')
+data.setCell(2, 3, 1984);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -274,36 +274,48 @@ return data;
                 <span class="method-name">Setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">loginWithInvalidEmailTest</span>
-                <span class="method-start">9512 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">loginWithInvalidEmailTest1</span>
-                <span class="method-start">11746 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">13629 ms</span>
-              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testRunnersForThreadLocal.LoginTestRunner1</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">15734 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">16972 ms</span>
+                <span class="method-start">26327 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testRunnersForThreadLocal.LoginTestRunner2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginWithInvalidEmailTest</span>
+                <span class="method-start">27300 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testRunnersForThreadLocal.LoginTestRunner1</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">29357 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testRunnersForThreadLocal.LoginTestRunner2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginWithInvalidEmailTest1</span>
+                <span class="method-start">30296 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">18615 ms</span>
+                <span class="method-start">32281 ms</span>
               </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testRunnersForThreadLocal.LoginTestRunner1</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDownAfterClass</span>
-                <span class="method-start">18622 ms</span>
+                <span class="method-start">37557 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

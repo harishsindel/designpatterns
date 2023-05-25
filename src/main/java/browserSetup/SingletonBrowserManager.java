@@ -1,4 +1,4 @@
-package singleton;
+package browserSetup;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,11 +8,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SingletonBaseClass {
+public class SingletonBrowserManager {
 	private static WebDriver driver = null;
-	private static String browserName = "chrome";
+	//private static String browserName = "chrome";
 	
-	public static void init() {
+	public static WebDriver getDriver(String browserName) {
 		if(driver == null) {
 			if(browserName.equalsIgnoreCase("chrome")){
 				WebDriverManager.chromedriver().setup();
@@ -27,10 +27,10 @@ public class SingletonBaseClass {
 
         //add implicit timeout
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        
+        return driver;
 	}
-	public static WebDriver getDriver() {
-		return driver;
-	}
+	
 	public static void quit() {
 		driver.quit();
 		driver = null;

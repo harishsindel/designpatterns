@@ -1,4 +1,4 @@
-package threadlocal;
+package browserSetup;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -6,7 +6,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-import singleton.SingletonBaseClass;
 import utils.ConfigFileReader;
 
 public class BaseTest {
@@ -14,20 +13,20 @@ public class BaseTest {
 	ConfigFileReader configReader = new ConfigFileReader();
 	String parallel = configReader.getParallel();
 	protected WebDriver driver;
-
+	String browserName = configReader.getBrowser();
 
     @BeforeTest
     public void Setup(){
     	if(parallel.equalsIgnoreCase("true")) {
-    		driver = BrowserManager.doBrowserSetup();
+    		driver = BrowserManager.getDriver();
             //set driver
             threadLocalDriver.set(driver);
             driver = getDriver();
             System.out.println("Before Test Thread ID: "+Thread.currentThread().getId());
             //driver.get(configReader.getApplicationUrl());
     	} else {
-    		SingletonBaseClass.init();
-    		driver = SingletonBaseClass.getDriver();
+    		//SingletonBrowserManager.getDriver(browserName);
+    		driver = SingletonBrowserManager.getDriver(browserName);
     		//driver.get(configReader.getApplicationUrl());
     	}
     	driver.get(configReader.getApplicationUrl());
@@ -67,7 +66,7 @@ public class BaseTest {
             System.out.println("After Test Thread ID: "+Thread.currentThread().getId());
             threadLocalDriver.remove();
     	} else {
-		SingletonBaseClass.quit();
+		SingletonBrowserManager.quit();
     	}
 	}
 }

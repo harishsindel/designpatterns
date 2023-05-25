@@ -5,8 +5,8 @@ import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import browserSetup.BaseTest;
 import pages.Login;
-import threadlocal.BaseTest;
 
 public class LoginTestRunner2 extends BaseTest {
 
